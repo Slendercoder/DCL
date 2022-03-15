@@ -74,7 +74,7 @@
 
              var num_locations = node.game.settings.num_locations;
 
-             W.getElementById('container').style.display = 'none';
+             W.getElementById('canvas_container1').style.display = 'none';
              W.getElementById('container2').style.display = '';
 
              if (node.game.playersGuess == unicorn) {
@@ -164,7 +164,7 @@
              node.game.PERFORMANCE[me].push(perform);
 
              // Ask the html to draw the score
-             node.emit('DrawScore', node.game.SCORE[me]);
+             // node.emit('DrawScore', node.game.SCORE[me]);
 
          }; // end function showScore
 
@@ -364,7 +364,7 @@
          cb: function() {
            var buttonNext;
 
-           node.emit('clear_paper');
+           // node.emit('clear_paper');
 
            // Show the score
            this.showScore();
@@ -526,34 +526,6 @@
                };
            }
        });
-    //
-    //
-    //  // Self-efficacy measure (How will you rank in the game 1-9?).
-    //
-    //   stager.extendStep('belief', {
-    //        init: function() {
-    //            this.belief = node.widgets.get('ChoiceTable', {
-    //                id: 'belief',
-    //                title: false,
-    //                left: 'worst',
-    //                right: 'best',
-    //                choices: [
-    //                    '9<sup>th</sup>', '8<sup>th</sup>', '7<sup>th</sup>',
-    //                    '6<sup>th</sup>', '5<sup>th</sup>', '4<sup>th</sup>',
-    //                    '3<sup>rd</sup>', '2<sup>nd</sup>', '1<sup>st</sup>'
-    //                ],
-    //                requiredChoice: true
-    //            });
-    //        },
-    //        frame: 'belief.html',
-    //        done: function() {
-    //            var values;
-    //            values = this.belief.getValues({ highlight: true });
-    //            if (values.choice === null) return false;
-    //            return values;
-    //        }
-    //    });
-
 
      stager.extendStep('end', {
          // donebutton: false,

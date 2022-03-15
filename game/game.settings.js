@@ -47,7 +47,7 @@
      // # Game specific properties
 
      // Numnber of game rounds repetitions.
-     REPEAT: 60,
+     REPEAT: 25,
 
      // Number of locations in a row or column
      // The total number of locations is num_locations * num_locations
